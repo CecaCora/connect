@@ -1,0 +1,17 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Simple webpack app template.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack watch --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "author": "Ceca Cora",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.16.0",
+    "webpack-cli": "^4.4.0"
+  },
+  "dependencies": {}
+}
