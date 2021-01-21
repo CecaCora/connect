@@ -1,7 +1,7 @@
 {
-  "name": "app",
+  "name": "connect",
   "version": "1.0.0",
-  "description": "Simple webpack app template.",
+  "description": "Organise your tasks and thoughts with Connect.",
   "main": "index.js",
   "scripts": {
     "dev": "webpack watch --mode=development",

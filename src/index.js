@@ -1,1 +1,1 @@
-console.log('App is now running!');
+console.log('Connect is now running!');
