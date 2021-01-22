@@ -14,12 +14,18 @@
 }
 
 body {
-  background: #0f161a;
+  background-color: hsl(201.82, 26.83%, 8.04%);
+  color: white;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: Comfortaa, sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   margin: 0;
 }
 
@@ -28,28 +34,57 @@ p {
   font-weight: 400;
 }
 
+/* main navigation */
+
 .menu {
-  background: hsla(200.87, 27.71%, 16.27%, 0.7);
-  backdrop-filter: blur(0.2rem);
+  background: hsla(200.87, 27.71%, 16.27%, 0.95);
+  backdrop-filter: blur(0.5rem);
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2rem;
   height: 100vh;
   width: 100vw;
   position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
-  padding: 1rem;
+  padding: 2rem 3rem;
+  overflow: scroll;
+  /* transform: translateX(-100vw); */
 }
 
 .menu section {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
+}
+
+.menu .submenu:last-child {
+  padding-bottom: 2rem;
 }
 
 a {
   font-family: Assistant, sans-serif;
-  color: white;
+  color: hsl(202.5, 27.91%, 83.14%);
   text-decoration: none;
+}
+
+.submenu h4 {
+  font-size: 1rem;
+  color: hsl(52.71, 78.65%, 65.1%);
+  border-bottom: 1px solid hsl(52.71, 78.65%, 65.1%);
+}
+
+.submenu h5 {
+  font-size: 0.75rem;
+  color: hsl(52.39, 79.78%, 82.55%);
+}
+
+.labels section:last-child {
+  margin-top: 0.5rem;
+}
+
+.archive h4 {
+  color: hsl(201.13, 28.29%, 49.22%);
+  border-bottom: none;
 }
