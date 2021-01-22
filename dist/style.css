@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Comfortaa:wght@300..700&display=swap');
 
+:root {
+  font-size: clamp(16px, 8px + 1vw, 32px);
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scrollbar-width: none;
 }
 
 body {
@@ -15,9 +20,36 @@ body {
 h1 {
   font-family: Comfortaa, sans-serif;
   font-weight: 400;
+  margin: 0;
 }
 
 p {
   font-family: Assistant, sans-serif;
   font-weight: 400;
+}
+
+.menu {
+  background: hsla(200.87, 27.71%, 16.27%, 0.7);
+  backdrop-filter: blur(0.2rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+}
+
+.menu section {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  font-family: Assistant, sans-serif;
+  color: white;
+  text-decoration: none;
 }
