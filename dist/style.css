@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Comfortaa:wght@300..700&display=swap');
 
 :root {
-  font-size: clamp(16px, 8px + 1vw, 32px);
+  font-size: clamp(16px, 1px + 1vw, 32px);
 }
 
 *,
@@ -101,7 +101,7 @@ p {
 }
 
 .archive h4 {
-  color: hsl(201.13, 28.29%, 49.22%);
+  color: hsl(200.82, 28.32%, 66.08%);
   border-bottom: none;
 }
 
@@ -114,7 +114,8 @@ p {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  padding-bottom: 0.125rem;
+  max-height: 0;
+  transition: max-height 0.2s ease-in-out;
 }
