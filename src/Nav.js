@@ -1,4 +1,4 @@
-import { Caret, Focus, Schedule, Labels, Archive } from './Icons';
+import { Caret, Focus, Schedule, Labels, Archive, MenuLink } from './Icons';
 
 const Nav = () => {
   let focusHeader = document.querySelector('.focus > h4');
@@ -16,6 +16,12 @@ const Nav = () => {
   let archiveHeader = document.querySelector('.archive > h4');
   let archiveIcon = Archive();
   archiveHeader.insertBefore(archiveIcon, archiveHeader.childNodes[0]);
+
+  let menuLinks = document.querySelectorAll('.menu-link');
+  menuLinks.forEach((menuLink) => {
+    let menuLinkIcon = MenuLink();
+    menuLink.insertBefore(menuLinkIcon, menuLink.childNodes[0]);
+  });
 
   let accordions = document.querySelectorAll('.acc-header');
   let panels = document.querySelectorAll('.acc-panel');
