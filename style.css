@@ -55,6 +55,12 @@ p {
   /* transform: translateX(-100vw); */
 }
 
+@media screen and (min-width: 600px) {
+  .menu {
+    max-width: max-content;
+  }
+}
+
 .menu section {
   display: flex;
   flex-direction: column;
@@ -64,9 +70,18 @@ p {
   padding-bottom: 2.5rem;
 }
 
-.menu a {
+.menu-link {
   color: hsl(202.5, 27.91%, 83.14%);
   text-decoration: none;
+  display: flex;
+  gap: 0.125rem;
+  align-items: center;
+}
+
+.menu-link-icon {
+  width: 1em;
+  height: 1em;
+  z-index: -1;
 }
 
 .submenu h4 {
@@ -78,7 +93,6 @@ p {
 }
 
 .submenu h5 {
-  font-size: 0.75rem;
   color: hsl(52.39, 79.78%, 82.55%);
 }
 
