@@ -1,14 +1,24 @@
-import Caret from './icons/Caret';
+import { Caret, Focus, Schedule, Labels, Archive } from './Icons';
 
-const Nav = (() => {
-  console.log('Nav component successfully activated!');
+const Nav = () => {
+  let focusHeader = document.querySelector('.focus > h4');
+  let focusIcon = Focus();
+  focusHeader.insertBefore(focusIcon, focusHeader.childNodes[0]);
+
+  let scheduleHeader = document.querySelector('.schedule > h4');
+  let scheduleIcon = Schedule();
+  scheduleHeader.insertBefore(scheduleIcon, scheduleHeader.childNodes[0]);
+
+  let labelsHeader = document.querySelector('.labels > h4');
+  let labelsIcon = Labels();
+  labelsHeader.insertBefore(labelsIcon, labelsHeader.childNodes[0]);
+
+  let archiveHeader = document.querySelector('.archive > h4');
+  let archiveIcon = Archive();
+  archiveHeader.insertBefore(archiveIcon, archiveHeader.childNodes[0]);
 
   let accordions = document.querySelectorAll('.acc-header');
   let panels = document.querySelectorAll('.acc-panel');
-
-  // for (let i = 0; i < Array.from(accordions).length; i++) {
-  //   Array.from(accordions)[i].appendChild(caret);
-  // }
 
   panels.forEach((panel) => {
     panel.style.maxHeight = `${panel.scrollHeight}px`;
@@ -27,8 +37,7 @@ const Nav = (() => {
         panel.style.maxHeight = `${panel.scrollHeight}px`;
       }
 
-      let caret = e.target.firstElementChild;
-      console.log(caret);
+      let caret = e.target.lastElementChild;
 
       if (caret.style.transform) {
         caret.style.transform = null;
@@ -37,6 +46,8 @@ const Nav = (() => {
       }
     });
   });
-})();
+
+  console.log('Nav component successfully activated!');
+};
 
 export default Nav;

@@ -43,14 +43,14 @@ p {
   backdrop-filter: blur(0.5rem);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
   height: 100vh;
   width: 100vw;
   position: fixed;
   z-index: 100;
   top: 0;
   left: 0;
-  padding: 2rem 3rem;
+  padding: 2.5rem 4rem;
   overflow: scroll;
   /* transform: translateX(-100vw); */
 }
@@ -61,7 +61,7 @@ p {
 }
 
 .menu .submenu:last-child {
-  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
 }
 
 .menu a {
@@ -74,6 +74,7 @@ p {
   color: hsl(52.71, 78.65%, 65.1%);
   border-bottom: 1px solid hsl(52.71, 78.65%, 65.1%);
   text-transform: lowercase;
+  position: relative;
 }
 
 .submenu h5 {
@@ -81,8 +82,13 @@ p {
   color: hsl(52.39, 79.78%, 82.55%);
 }
 
-.focus h4 {
-  font-size: 1.875rem;
+.submenu-icon {
+  width: 1em;
+  height: 1em;
+  z-index: -1;
+  align-self: center;
+  position: absolute;
+  left: -1.25em;
 }
 
 .focus * + * {
