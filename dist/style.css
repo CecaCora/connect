@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Comfortaa:wght@300..700&display=swap');
 
 :root {
-  font-size: clamp(16px, 1px + 1vw, 32px);
+  font-size: clamp(16px, 1px + 0.8vw, 32px);
 }
 
 *,
@@ -52,7 +52,8 @@ p {
   left: 0;
   padding: 2.5rem 4rem;
   overflow: scroll;
-  /* transform: translateX(-100vw); */
+  /* transform: TODO: scrollWidth */
+  display: none;
 }
 
 @media screen and (min-width: 600px) {
@@ -148,4 +149,37 @@ p {
   padding-bottom: 0.125rem;
   max-height: 0;
   transition: max-height 0.2s ease-in-out;
+}
+
+/* main content area */
+
+.main {
+  padding: 2rem;
+  scrollbar-width: none;
+}
+
+.main * + section {
+  margin-top: 1rem;
+}
+
+.main h1,
+.main h2 {
+  color: hsl(52.71, 78.65%, 65.1%);
+  margin-bottom: 0.75rem;
+}
+
+.actions button {
+  display: block;
+  font-family: Assistant, sans-serif;
+  font-size: 1.25rem;
+  color: white;
+  width: 100%;
+  padding: 2rem 0;
+  background: hsl(201.7, 28.48%, 32.35%);
+  border-radius: 0.5rem;
+  border: 0.25rem solid hsl(180, 28.26%, 36.08%);
+}
+
+.actions * + * {
+  margin-top: 1rem;
 }
