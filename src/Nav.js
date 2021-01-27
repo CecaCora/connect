@@ -17,7 +17,7 @@ const Nav = () => {
   let archiveIcon = Archive();
   archiveHeader.insertBefore(archiveIcon, archiveHeader.childNodes[0]);
 
-  let menuLinks = document.querySelectorAll('.menu-link');
+  let menuLinks = document.querySelectorAll('.side-nav-link');
   menuLinks.forEach((menuLink) => {
     let menuLinkIcon = MenuLink();
     menuLink.insertBefore(menuLinkIcon, menuLink.childNodes[0]);
