@@ -1,8 +1,9 @@
 const App = (() => {
-  const state = {};
+  let state = {};
+
   const getState = () => state;
   const setState = (changes) => {
-    console.log(state, changes);
+    state = { ...state, ...changes };
   };
   return Object.freeze({ getState, setState });
 })();

@@ -1,4 +1,4 @@
-import Nav from './Nav';
-import View from './View';
+import App from './App';
+import Bullet from './Bullet';
 
-Nav();
+Bullet('home').createNode();
